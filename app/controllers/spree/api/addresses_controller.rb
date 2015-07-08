@@ -7,7 +7,7 @@ module Spree
     	def index    
 		    @addresses = @current_api_user.addresses
 		    render json:  @addresses,  
-		      :methods => [:state_name , :country_name ]
+		      :methods => [:state_name , :country_name ,:defult_shippiing_address_id]
 
 		      #render json:  @addresses.as_json(include: {:state_name => :state_name })
 		  end
